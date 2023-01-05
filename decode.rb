@@ -17,5 +17,5 @@ def decode_word(morse_word)
   @word_array.map do |i|
     @word += decode_char(i)
   end
-  "#{@word}"
+  @word.to_s
 end
