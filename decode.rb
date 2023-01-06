@@ -19,3 +19,15 @@ def decode_word(morse_word)
   end
   @word.to_s
 end
+
+def decode(mose_code)
+  @final_word = ''
+  @mose_code_arr = mose_code.split('   ')
+  @mose_code_arr.map do |mose_word|
+    @final_word += decode_word(mose_word)
+  end
+
+  puts "#{@final_word} "
+end
+
+decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
