@@ -1,4 +1,4 @@
-MORSE_CODE_HASH_TABLE = {
+$morse_code = {
   '.-' => 'A', '-...' => 'B', '-.-.' => 'C', '-..' => 'D', '.' => 'E',
   '..-.' => 'F', '--.' => 'G', '....' => 'H', '..' => 'I', '.---' => 'J',
   '-.-' => 'K', '.-..' => 'L', '--' => 'M', '-.' => 'N', '---' => 'O',
@@ -7,7 +7,7 @@ MORSE_CODE_HASH_TABLE = {
 }.freeze
 
 def decode_char(morse_char)
-  @char = MORSE_CODE_HASH_TABLE[morse_char]
+  @char = morse_code[morse_char]
   @char
 end
 
@@ -20,5 +20,3 @@ def decode_word(morse_word)
   end
   @word.to_s
 end
-
-
