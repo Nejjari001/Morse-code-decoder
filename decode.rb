@@ -20,7 +20,6 @@ def decode_word(morse_word)
   @word.to_s
 end
 
-
 def decode(mose_code)
   @final_word = ''
   @mose_code_arr = mose_code.split('   ')
