@@ -13,7 +13,7 @@ end
 
 def decode_word(morse_word)
   @word = ''
-  @word_array = morse_word.split(' ')
+  @word_array = morse_word.split
   @word_array.map do |i|
     @word += decode_char(i)
   end
