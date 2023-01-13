@@ -28,8 +28,8 @@ def decode(mose_code)
     @final_word += @word_space + decode_word(mose_word)
   end
 
-#   puts "#{@final_word} "
-# end
+  puts @final_word.to_s
+end
 
 puts decode('-- -.--   -. .- -- .')
 puts decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
