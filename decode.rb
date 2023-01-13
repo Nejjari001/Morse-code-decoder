@@ -13,21 +13,23 @@ end
 
 def decode_word(morse_word)
   @word = ''
-  @word_array = morse_word.split
+  @word_array = morse_word.split(' ')
   @word_array.map do |i|
     @word += decode_char(i)
   end
   @word.to_s
 end
 
-# def decode(mose_code)
-#   @final_word = ''
-#   @mose_code_arr = mose_code.split('   ')
-#   @mose_code_arr.map do |mose_word|
-#     @final_word += decode_word(mose_word)
-#   end
+def decode(mose_code)
+  @final_word = ''
+  @mose_code_arr = mose_code.split('  ')
+  @mose_code_arr.map do |mose_word|
+    @word_space = ' '
+    @final_word += @word_space + decode_word(mose_word)
+  end
 
-#   puts "#{@final_word} "
-# end
+  puts @final_word.to_s
+end
 
-decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+puts decode('-- -.--   -. .- -- .')
+puts decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
